@@ -15,5 +15,13 @@ namespace Decorator
             var value = conponent.GetData();
             button1.Text = value;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var conponent = new ComponentB(radioButton2.Checked, radioButton3.Checked);
+            var value = conponent.GetData();
+            button2.Text = value;
+
+        }
     }
 }
