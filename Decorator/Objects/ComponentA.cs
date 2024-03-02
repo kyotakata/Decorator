@@ -9,9 +9,13 @@ namespace Decorator.Objects
     public sealed class ComponentA : IComponent
     {
         private bool _isUpper = false;
-        public ComponentA(bool isUpper)
+
+        private bool _isLower = false;
+        
+        public ComponentA(bool isUpper, bool isLower)
         {
             _isUpper = isUpper;
+            _isLower = isLower;
         }
 
         public string GetData()
@@ -20,6 +24,11 @@ namespace Decorator.Objects
             if (_isUpper)
             {
                 return result.ToUpper();
+            }
+            else if (_isLower)
+            {
+                return result.ToLower();
+
             }
 
             return result;
