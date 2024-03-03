@@ -14,29 +14,4 @@ namespace Decorator.Objects
         }
     }
 
-    public sealed class CompornentAUpper : ComponentA
-    {
-        public CompornentAUpper()
-        {
-        }
-
-        public override string GetData()
-        {
-            return base.GetData().ToUpper();
-        }
-    }
-
-    public sealed class CompornentALower : ComponentA
-    {
-        public CompornentALower()
-        {
-        }
-
-        public override string GetData()
-        {
-            return base.GetData().ToLower();
-        }
-    }
-
-
 }
