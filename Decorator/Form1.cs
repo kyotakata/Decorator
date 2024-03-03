@@ -26,5 +26,22 @@ namespace Decorator
             button1.Text = value;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var conponent = new ComponentB();
+            if (radioButton2.Checked)
+            {
+                conponent = new CompornentBUpper();
+            }
+            else if (radioButton3.Checked)
+            {
+                conponent = new CompornentBLower();
+            }
+
+            var value = conponent.GetData();
+
+            button2.Text = value;
+
+        }
     }
 }
