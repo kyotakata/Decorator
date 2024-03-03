@@ -13,17 +13,6 @@ namespace Decorator.Objects
             return File.ReadAllText("textA.txt");
         }
 
-        public string GetDataUpper()
-        {
-            return File.ReadAllText("textA.txt").ToUpper();
-        }
-
-
-        public string GetDataLower()
-        {
-            return File.ReadAllText("textA.txt").ToLower();
-        }
-
     }
 
 }
