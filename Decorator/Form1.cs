@@ -16,6 +16,10 @@ namespace Decorator
             {
                 conponent = new CompornentAUpper();
             }
+            else if (radioButton3.Checked)
+            {
+                conponent = new CompornentALower();
+            }
 
             var value = conponent.GetData();
 

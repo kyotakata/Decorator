@@ -26,4 +26,17 @@ namespace Decorator.Objects
         }
     }
 
+    public sealed class CompornentALower : ComponentA
+    {
+        public CompornentALower()
+        {
+        }
+
+        public override string GetData()
+        {
+            return base.GetData().ToLower();
+        }
+    }
+
+
 }
