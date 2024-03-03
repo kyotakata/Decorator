@@ -17,6 +17,11 @@ namespace Decorator
             {
                 component = new DecoratorUpper(component); //ÇÊÇ¡ÇƒÅAÇ±Ç±Ç≈ÉGÉâÅ[Ç…Ç»ÇÁÇ»Ç¢
             }
+            else if(radioButton3.Checked)
+            {
+                component = new DecoratorLower(component);
+            }
+
             var value = component.GetData();
             button1.Text = value;
         }
