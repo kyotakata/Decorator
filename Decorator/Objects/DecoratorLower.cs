@@ -17,6 +17,11 @@ namespace Decorator.Objects
         {
             return _child.GetData().ToLower();
         }
+
+        protected override int GetPriceSub()
+        {
+            return 30;
+        }
     }
 
 }

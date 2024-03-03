@@ -43,5 +43,13 @@ namespace Decorator
             button2.Text = value;
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            IComponent component = new ComponentA();
+            component = new DecoratorUpper(component);
+            component = new DecoratorLower(component);
+            button3.Text = component.GetPrice().ToString();
+        }
     }
 }

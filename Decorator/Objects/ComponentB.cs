@@ -13,6 +13,10 @@ namespace Decorator.Objects
             return File.ReadAllText("textB.txt");
         }
 
+        public int GetPrice()
+        {
+            return 200;
+        }
     }
 
 }

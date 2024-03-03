@@ -24,7 +24,13 @@ namespace Decorator.Objects
             return GetDataSub();
         }
 
+        public int GetPrice()
+        {
+            return _child.GetPrice() + GetPriceSub();
+        }
+
         protected abstract string GetDataSub();
+        protected abstract int GetPriceSub();
     }
 
 }
