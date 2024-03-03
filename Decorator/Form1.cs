@@ -26,5 +26,22 @@ namespace Decorator
             button1.Text = value;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IComponent component = new ComponentB();// varだと具象クラスの型(ComponentB)になるので、IComponentを指定する。
+
+            if (radioButton2.Checked)
+            {
+                component = new DecoratorUpper(component); //よって、ここでエラーにならない
+            }
+            else if (radioButton3.Checked)
+            {
+                component = new DecoratorLower(component);
+            }
+
+            var value = component.GetData();
+            button2.Text = value;
+
+        }
     }
 }
