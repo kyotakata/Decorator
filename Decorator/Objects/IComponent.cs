@@ -9,5 +9,9 @@ namespace Decorator.Objects
     public interface IComponent
     {
         string GetData();
+
+        string GetDataUpper();
+
+        string GetDataLower();
     }
 }

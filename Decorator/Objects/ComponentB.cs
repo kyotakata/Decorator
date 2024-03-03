@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Decorator.Objects
 {
-    public class ComponentA : IComponent
+    public class ComponentB : IComponent
     {
         public  string GetData()
         {
-            return File.ReadAllText("textA.txt");
+            return File.ReadAllText("textB.txt");
         }
 
         public string GetDataUpper()
         {
-            return File.ReadAllText("textA.txt").ToUpper();
+            return File.ReadAllText("textB.txt").ToUpper();
         }
 
 
         public string GetDataLower()
         {
-            return File.ReadAllText("textA.txt").ToLower();
+            return File.ReadAllText("textB.txt").ToLower();
         }
 
     }
