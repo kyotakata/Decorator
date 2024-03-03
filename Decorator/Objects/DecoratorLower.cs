@@ -7,19 +7,13 @@ using System.Threading.Tasks;
 namespace Decorator.Objects
 {
     // 1．同じインタフェースの実装にする
-    public sealed class DecoratorLower : IComponent 
+    public sealed class DecoratorLower : Decorator
     {
-        // 2．同じインタフェースを保持する
-        private IComponent _child;
-
-        // 3．コンストラクタで子階層を受ける
-        public DecoratorLower(IComponent child)
+        public DecoratorLower(IComponent child) : base(child)
         {
-            _child = child;
         }
 
-        // 4．_childを使って実装(拡張)する
-        public string GetData()
+        protected override string GetDataSub()
         {
             return _child.GetData().ToLower();
         }
