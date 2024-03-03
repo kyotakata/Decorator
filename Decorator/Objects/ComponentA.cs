@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace Decorator.Objects
 {
-    public sealed class ComponentA : IComponent
+    public class ComponentA : IComponent
     {
-        public string GetData()
+        public  virtual string GetData()
         {
             return File.ReadAllText("textA.txt");
+        }
+    }
+
+    public sealed class CompornentAUpper : ComponentA
+    {
+        public CompornentAUpper()
+        {
+        }
+
+        public override string GetData()
+        {
+            return base.GetData().ToUpper();
         }
     }
 
